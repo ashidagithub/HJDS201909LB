@@ -39,11 +39,11 @@ lbl_programmer = tk.Label(
     top_win, text='I am a programmer!')
 lbl_programmer.pack()
 
-
+# 对图片进行预处理，变成 bitmap
 image = Image.open('mybk.jpg')
 bk_img = ImageTk.PhotoImage(image)
 # 放置背景图片
-lbl_bk = tk.Label(top_win, image=bk_img)
+lbl_bk = tk.Label(top_win, image=bk_img, text='MMP')
 lbl_bk.place(x=100, y=300, width=600, height=300)
 
 # ------------------------------

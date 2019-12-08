@@ -23,19 +23,18 @@ win_size_pos = '800x600'
 top_win.geometry(win_size_pos)
 
 # ------------------------------
-default_var = tk.StringVar(value='I love you ')
-entry_cleartext = tk.Entry(
+default_var = tk.StringVar(value='2019/12/8')
+ent_row = tk.Entry(
     top_win,
     show=None,
     textvariable=default_var,
-    font=('Arial', 14)
-)  # 显示成明文形式
-# entry_cleartext.pack()
-entry_cleartext.place(x=100, y=100, width=50)
+)
+#ent_row.pack()
+ent_row.place(x=100, y=100, width=150)
 
 
-text_description = tk.Text(top_win, height=6)
-text_description.pack()
+txt_desc = tk.Text(top_win, height=6, width=50)
+txt_desc.pack()
 
 # ------------------------------
 

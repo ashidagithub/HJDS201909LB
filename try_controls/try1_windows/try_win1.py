@@ -18,7 +18,7 @@ top_win = tk.Tk()
 top_win.title('Hello World Window')
 
 # resize root window
-win_size_pos = '800*600'
+win_size_pos = '800x600'
 #win_size_pos = '360x60'
 top_win.geometry(win_size_pos)
 

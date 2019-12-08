@@ -24,21 +24,25 @@ win_size_pos = '800x600'
 #win_size_pos = '360x60'
 top_win.geometry(win_size_pos)
 
-#------------------------------
+# ------------------------------
+
 
 def cmd_print():
     print('Show in command window...')
     return
 
+
 def cmd_pop():
     tk.messagebox.showinfo(title='Information',
                            message='Mouse clicked !')  # 提示信息对话窗
-    '''
-    tk.messagebox.showwarning(title='Warning', message='Warning Information')  # 提出警告对话窗
-    tk.messagebox.showerror(title='Error', message='Error Information')  # 提出错误对话窗
-    '''
+    tk.messagebox.showwarning(title='Warning',
+                              message='Warning Information')  # 提出警告对话窗
+    tk.messagebox.showerror(title='Error',
+                            message='Error Information')  # 提出错误对话窗
+
     #print('Show in command window...')
     return
+
 
 btn_help = tk.Button(top_win, text="Push me!", command=cmd_pop)
 btn_help.pack()
@@ -56,15 +60,17 @@ for r in button_relieves:
     tk.Button(top_win, text=r, relief=r, width=10, height=2).pack()
 
 
-btn_test = tk.Button(top_win, text='Log in ', relief='raised', width=10, height=2)
+btn_test = tk.Button(top_win, text='Log in ',
+                     relief='raised', width=10, height=2)
 btn_test.pack()
 # 图片按钮
 image = Image.open('btn1_shutdown.jpg')
 bk_img = ImageTk.PhotoImage(image)
-btn_try_pic = tk.Button(top_win, text='try pic', compound='center', image=bk_img)
+btn_try_pic = tk.Button(top_win, text='try pic',
+                        compound='center', image=bk_img)
 btn_try_pic.pack()
 
-#------------------------------
+# ------------------------------
 
 
 # show window and get into event loop

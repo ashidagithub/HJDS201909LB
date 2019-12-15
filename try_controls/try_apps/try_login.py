@@ -85,8 +85,7 @@ btn_login = tk.Button(
     text='Sign in ',
     relief='raised',
     width=10, height=2,
-    bg='#ceceff',
-    fg='white',
+    bg='#ceceff',  fg='white',
     command=cmd_login,
 )
 btn_login.place(x=20, y=140, width=50)

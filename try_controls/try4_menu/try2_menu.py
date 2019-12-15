@@ -36,12 +36,13 @@ menubar = tk.Menu(top_win)
 menubar.add_command(label='Undo', command=cmd_undo)
 menubar.add_command(label='Redo', command=cmd_redo)
 
-frame = tk.Frame(top_win, width=400, height=400, bg='red')
+frame = tk.Frame(top_win, width=400, height=400, bg='#9370DB')
 frame.pack()
 
 def popup(event):
     menubar.post(event.x_root, event.y_root)
-frame.bind("<Button-3>", popup)
+top_win.bind("<Button-3>", popup)
+#frame.bind("<Button-3>", popup)
 
 #------------------------------
 

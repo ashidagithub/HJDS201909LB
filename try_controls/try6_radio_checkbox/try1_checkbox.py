@@ -37,15 +37,24 @@ v2 = tk.IntVar()
 v3 = tk.IntVar()
 v4 = tk.IntVar()
 value_of_btn = (v1, v2, v3, v4)
+
 '''
+# 单个 check button
+def show_selected():
+    print('---')
+    print(v1.get())
+    return
+
 chk_btn1 = tk.Checkbutton(
         frame_root1,
         text=text_of_btn[0],
         variable=value_of_btn[0],
-        command=None
+        command=show_selected
         )
 chk_btn1.place(x=20, y=40)
 '''
+
+# 利用 for 制作多个 checkbutton
 def show_selected():
     print('---')
     for v in value_of_btn:

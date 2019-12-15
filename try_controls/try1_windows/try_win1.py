@@ -25,6 +25,20 @@ top_win.geometry(win_size_pos)
 
 #------------------------------
 # balablabla
+
+# create a top menu
+top_menu = tk.Menu(top_win)
+top_menu.add_command(label="Hello", command=None)
+top_menu.add_command(label="Quit", command=top_win.quit)
+
+top_menu2 = tk.Menu(top_win)
+top_menu2.add_command(label="Byebye", command=None)
+top_menu2.add_command(label="Quit", command=top_win.quit)
+
+# show the menu
+top_win.config(menu=top_menu2)
+
+
 #------------------------------
 
 

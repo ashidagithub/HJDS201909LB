@@ -37,7 +37,7 @@ lbl_info = tk.Label(
 lbl_info.place(x=20, y=20, width=200)
 
 # Step2:
-default_var = tk.StringVar(value='username')
+default_var = tk.StringVar(value='Hello Paul')
 ent_username = tk.Entry(
     top_win,
     show=None,
@@ -59,17 +59,6 @@ def cmd_login():
     print(ent_password.get())
     u = ent_username.get()
     p = ent_password.get()
-
-    '''
-    if u == 'admin':
-        if p == '666':
-            tk.messagebox.showinfo(title='Information', message='Successed!')
-        else:
-            tk.messagebox.showerror(
-                title='Information', message='Wrong password!')
-    else:
-        tk.messagebox.showerror(title='Information', message='Wrong username!')
-    '''
 
     if u == 'admin' and p == '666':
         tk.messagebox.showinfo(title='Information', message='Successed!')

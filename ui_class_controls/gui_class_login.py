@@ -12,8 +12,11 @@ import tkinter as tk
 from tkinter import ttk
 import tkinter.messagebox  # 这个是消息框，对话框的关键
 
+
 class UC_Login:
     def __init__(self, pwin):
+        '初始化类'
+
         print('UC_Login class created ! ')
         self.parent_win = pwin
 
@@ -57,14 +60,14 @@ class UC_Login:
         )
         self.ent_password.place(x=20, y=100, width=200)
 
-        #def cmd_login
+        # def cmd_login
         self.btn_login = tk.Button(
             self.parent_win,
             text='Sign in ',
             relief='raised',
             width=10, height=2,
             bg='#ceceff',  fg='white',
-            command = self.__cmd_login,
+            command=self.__cmd_login,
         )
         self.btn_login.place(x=20, y=140, width=50)
 

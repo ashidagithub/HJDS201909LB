@@ -25,17 +25,15 @@ top_win.geometry(win_size_pos)
 
 #------------------------------
 # Step1: Create frame
-frame_root1 = tk.Frame(top_win, bg="#646464", width=760, height=200)
+frame_root1 = tk.Frame(top_win, bg="#646464", width=360, height=240)
 # frame_root1.pack()
-frame_root1.place(x=20, y=100)
+frame_root1.place(x=20, y=20)
 
 # Step2: Appedn other controls
-lbl_test = tk.Label(frame_root1, text='text in frame')
+lbl_test = tk.Label(frame_root1, text='text in frame1')
 lbl_test.place(x=20, y=20)
 
-# Step3: Appedn other controls
-lbl_test2 = tk.Label(top_win, text='text in TOP WIN')
-lbl_test2.place(x=20, y=20)
+
 #------------------------------
 
 

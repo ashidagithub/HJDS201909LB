@@ -5,12 +5,13 @@
 # created:  2019.11
 
 # Description:
-#   初步学习 WinForm 编程 ( Frame )
+#   初步学习 WinForm 编程 ( Window )
 # ------------------------(max to 80 columns)-----------------------------------
 
 import tkinter as tk
 from tkinter import ttk
 import tkinter.messagebox
+from PIL import Image, ImageTk
 
 # create root window
 top_win = tk.Tk()
@@ -24,20 +25,22 @@ win_size_pos = '800x600'
 top_win.geometry(win_size_pos)
 
 #------------------------------
-# Step1: Create frame
-frame_root1 = tk.Frame(top_win, bg="#646464", width=360, height=240)
-# frame_root1.pack()
-frame_root1.place(x=20, y=20)
 
-# Step2: Appedn other controls
-lbl_test = tk.Label(frame_root1, text='text in frame1')
-lbl_test.place(x=20, y=20)
+# 对图片进行预处理，变成 bitmap
+image = Image.open('2020-MeiTu.png')
+bk_img = ImageTk.PhotoImage(image)
+# 放置背景图片
+# balablabla
+lbl_background = tk.Label(
+    top_win,
+    text='Hello World!',
+    bg='black',
+    image=bk_img,
+)
+lbl_background.place(x=0, y=0, width=800, height=600)
 
-# Step3: Try grid()
-for r in range(5):
-    for c in range(3):
-        lbl = tk.Label(frame_root1, bg='blue', text='label at row%d, column%d' % (r, c))
-        lbl.grid(row=r, column=c)
+ent_username = tk.Entry(top_win, width=10, bg='black', fg='white')
+ent_username.place(x=600, y=450)
 
 #------------------------------
 

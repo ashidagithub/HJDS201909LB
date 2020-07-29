@@ -32,12 +32,10 @@ ent_row = tk.Entry(
 #ent_row.pack()
 ent_row.place(x=100, y=100, width=150)
 
-
 txt_desc = tk.Text(top_win, height=6, width=50)
 txt_desc.pack()
 
 # ------------------------------
-
 
 # show window and get into event loop
 top_win.mainloop()
